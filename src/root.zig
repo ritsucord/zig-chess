@@ -195,9 +195,9 @@ pub const Board = struct {
             },
             .rook => {
                 const dir: [4][2]i8 = .{
-                            .{ 0,  1},
+                               .{ 0,  1},
                     .{-1,  0},            .{ 1,  0},
-                            .{ 0, -1},
+                               .{ 0, -1},
                 };
                 for (dir) |d| {
                     var cur_coord = rel_coord;
@@ -213,10 +213,10 @@ pub const Board = struct {
             },
             .knight => {
                 const dir: [8][2]i8 = .{
-                            .{-1,  2}, .{ 1,  2},
+                               .{-1,  2}, .{ 1,  2},
                     .{-2,  1},                       .{ 2,  1},
                     .{-2, -1},                       .{ 2, -1},
-                            .{-1, -2}, .{ 1, -2},
+                               .{-1, -2}, .{ 1, -2},
                 };
                 for (dir) |d| {
                     if (rel_coord.add(d[0], d[1])) |nx_coord| {
